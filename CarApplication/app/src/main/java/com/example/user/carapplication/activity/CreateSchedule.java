@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
 
@@ -95,9 +96,10 @@ public class CreateSchedule extends AppCompatActivity  {
         String minute2 = spinner10.getSelectedItem().toString();
         String time = year+month+day+hour+minute;
         String time2 = year2+month2+day2+hour2+minute2;
+        EditText editText = findViewById(R.id.editText6);
         textView = findViewById(R.id.textView3);
-        if(Scheduler.scheduleDatabase.insertdata("ds1107", time,time2))
-        textView.setText(time+", "+time2);
+        if(Scheduler.scheduleDatabase.insertdata(editText.getText().toString(), time,time2))
+        textView.setText("Successfully added!");
 
     }
 

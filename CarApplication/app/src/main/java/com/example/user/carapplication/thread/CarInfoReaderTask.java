@@ -37,7 +37,6 @@ public class CarInfoReaderTask implements Runnable{
         } catch (JSONException e) {
             e.printStackTrace();
         }
-
         Intent intent = new Intent(CarInfo.INTENT_FILTER1);
         intent.putStringArrayListExtra(CarInfo.INTENT_KEY1, list1);
         intent.putStringArrayListExtra(CarInfo.INTENT_KEY2, list2);

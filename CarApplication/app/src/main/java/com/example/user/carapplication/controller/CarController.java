@@ -13,6 +13,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.io.BufferedReader;
+import java.io.DataOutputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
@@ -153,5 +154,60 @@ public class CarController extends AppCompatTextView {
         }
         return list;
     }
-
+    public int addCarVin(String vin, String name) throws IOException {
+        String url = CarInventory.URL+"car/";
+        URL obj = new URL(url);
+        HttpURLConnection con = (HttpURLConnection) obj.openConnection();
+        con.setRequestMethod("POST");
+        con.setRequestProperty("User-Agent", "Mozilla/5.0");
+        con.setDoInput(true);
+        con.setDoOutput(true);
+        DataOutputStream dataOutputStream = new DataOutputStream(con.getOutputStream());
+        dataOutputStream.writeBytes("vin="+vin+"&"+"carName="+name);
+        dataOutputStream.flush();
+        dataOutputStream.close();
+        return con.getResponseCode();
+    }
+    public int addCarInfo(String vin, String category, String info) throws IOException {
+        String url = CarInventory.URL+"carinfo";
+        URL obj = new URL(url);
+        HttpURLConnection con = (HttpURLConnection) obj.openConnection();
+        con.setRequestMethod("POST");
+        con.setRequestProperty("User-Agent", "Mozilla/5.0");
+        con.setDoInput(true);
+        con.setDoOutput(true);
+        DataOutputStream dataOutputStream = new DataOutputStream(con.getOutputStream());
+        dataOutputStream.writeBytes("vin="+vin+"&category="+category+"&info="+info);
+        dataOutputStream.flush();
+        dataOutputStream.close();
+        return con.getResponseCode();
+    }
+    public int delete(String vin) throws IOException {
+        String url = CarInventory.URL+"car/";
+        URL obj = new URL(url);
+        HttpURLConnection con = (HttpURLConnection) obj.openConnection();
+        con.setRequestMethod("DELETE");
+        con.setRequestProperty("User-Agent", "Mozilla/5.0");
+        con.setDoInput(true);
+        con.setDoOutput(true);
+        DataOutputStream dataOutputStream = new DataOutputStream(con.getOutputStream());
+        dataOutputStream.writeBytes("vin="+vin);
+        dataOutputStream.flush();
+        dataOutputStream.close();
+        return con.getResponseCode();
+    }
+    public int deleteCarInfo(String vin, String category) throws IOException {
+        String url = CarInventory.URL+"carinfo";
+        URL obj = new URL(url);
+        HttpURLConnection con = (HttpURLConnection) obj.openConnection();
+        con.setRequestMethod("DELETE");
+        con.setRequestProperty("User-Agent", "Mozilla/5.0");
+        con.setDoInput(true);
+        con.setDoOutput(true);
+        DataOutputStream dataOutputStream = new DataOutputStream(con.getOutputStream());
+        dataOutputStream.writeBytes("vin="+vin+"&category="+category);
+        dataOutputStream.flush();
+        dataOutputStream.close();
+        return con.getResponseCode();
+    }
 }

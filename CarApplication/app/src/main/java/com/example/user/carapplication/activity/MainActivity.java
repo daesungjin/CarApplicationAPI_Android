@@ -20,9 +20,11 @@ public class MainActivity extends AppCompatActivity {
     public void buildInventory(View v){
         Intent intent = new Intent(this, CarInventory.class);
         startActivity(intent);
+
     }
     public void buildScheduler(View v){
         Intent intent = new Intent(this, Scheduler.class);
         startActivity(intent);
+
     }
 }

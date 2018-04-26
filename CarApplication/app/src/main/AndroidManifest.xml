@@ -20,7 +20,11 @@
         </activity>
         <activity android:name=".activity.CarInventory" />
         <activity android:name=".activity.CarInfo" />
-        <activity android:name=".activity.Scheduler"></activity>
+        <activity android:name=".activity.Scheduler" />
+        <activity android:name=".activity.CreateSchedule" />
+        <activity android:name=".activity.CreateCar" />
+        <activity android:name=".activity.VinInfo" />
+        <activity android:name=".activity.InsertInfo"></activity>
     </application>
 
 </manifest>
