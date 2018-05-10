@@ -1,0 +1,12 @@
+com\mycompany\carappapi\dao\CarDAO.class
+com\mycompany\carappapi\CarAppAPIConfiguration.class
+com\mycompany\carappapi\core\CarInfo.class
+com\mycompany\carappapi\resources\UserResource.class
+com\mycompany\carappapi\CarAppAPIApplication.class
+com\mycompany\carappapi\core\User.class
+com\mycompany\carappapi\dao\UserDAO.class
+com\mycompany\carappapi\core\UserInfo.class
+com\mycompany\carappapi\resources\CarResource.class
+com\mycompany\carappapi\core\Car.class
+com\mycompany\carappapi\core\mapper\UserMapper.class
+com\mycompany\carappapi\core\mapper\CarMapper.class

@@ -1,0 +1,5 @@
+com.mycompany.carappapi
+com.mycompany.carappapi.core
+com.mycompany.carappapi.core.mapper
+com.mycompany.carappapi.dao
+com.mycompany.carappapi.resources

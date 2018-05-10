@@ -1,0 +1,14 @@
+logging:
+  level: INFO
+  loggers:
+    com.mycompany: DEBUG
+server:
+    applicationConnectors:
+        - type: http
+          port: 4567
+         
+database:
+    driverClass: com.mysql.jdbc.Driver
+    user: root
+    password: 5598
+    url: jdbc:mysql://localhost:3306/car_app_db?useSSL=false&useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC
